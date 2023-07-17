@@ -15,7 +15,6 @@ Application displays flags of some countries and describes about the flag
 
 #Screenshot
 https://github.com/ManasaLakshmiB/JavaApp/assets/106768776/b97ec544-3d5c-43d0-a61a-dfe785b26986
-
 #Third party libraries
 
 Retrofit
