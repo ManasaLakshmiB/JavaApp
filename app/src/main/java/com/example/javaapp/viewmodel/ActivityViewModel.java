@@ -1,5 +1,7 @@
 package com.example.javaapp.viewmodel;
 
+import android.util.Log;
+
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -16,7 +18,10 @@ import dagger.hilt.android.lifecycle.HiltViewModel;
 
 @HiltViewModel
 public class ActivityViewModel extends ViewModel {
+
+
     MutableLiveData<List<RecyclerData>> liveData;
+
 
     @Inject
     Repository repository;
@@ -24,6 +29,8 @@ public class ActivityViewModel extends ViewModel {
     public ActivityViewModel(){
         liveData = new MutableLiveData();
     }
+
+
 
     public  MutableLiveData<List<RecyclerData>> getLiveData(){
         return liveData;

@@ -1,7 +1,7 @@
 package com.example.javaapp.Repository;
 
 import com.example.javaapp.model.RecyclerData;
-import com.example.javaapp.model.RecyclerList;
+
 
 import java.util.List;
 

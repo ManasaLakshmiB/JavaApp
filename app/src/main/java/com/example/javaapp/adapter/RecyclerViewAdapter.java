@@ -17,7 +17,7 @@ import com.example.javaapp.model.RecyclerData;
 import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
-    private List<RecyclerData> flags;//listitems
+    private List<RecyclerData> flags;
 
     public void setListItems(List<RecyclerData>listItems){
         this.flags = listItems;
@@ -34,7 +34,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewAdapter.MyViewHolder holder, int position) {
 
-        holder.textView.setText(flags.get(position).getFlags().getAlt());
+        String alt = flags.get(position).getFlags().getAlt();
+        if (alt.isEmpty()) {
+            holder.textView.setText("The description for this flag is not available" +
+                    " from the corresponding country");
+        } else {
+            holder.textView.setText(alt);
+        }
+
+
         Glide.with(holder.imageView)
                 .load(flags.get(position).getFlags().getPng())
                 .into(holder.imageView);

@@ -1,9 +1,11 @@
 package com.example.javaapp.Repository;
 
+import android.util.Log;
+
 import androidx.lifecycle.MutableLiveData;
 
 import com.example.javaapp.model.RecyclerData;
-import com.example.javaapp.model.RecyclerList;
+
 import com.google.gson.Gson;
 
 import java.util.Arrays;
@@ -35,6 +37,7 @@ public class RepoImpl {
             @Override
             public void onFailure(Call<List<RecyclerData>> call, Throwable t) {
                 liveData.postValue(null);
+
             }
         });
     }

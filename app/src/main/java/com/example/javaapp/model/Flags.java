@@ -6,7 +6,7 @@ public class Flags {
     private String alt;
 
     public Flags(String svg, String alt) {
-        this.png = svg;
+        this.png = png;
         this.alt = alt;
     }
 

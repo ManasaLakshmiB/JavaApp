@@ -1,6 +1,6 @@
 package com.example.javaapp.model;
 
-public class RecyclerData {
+public class  RecyclerData {
 
 private  Flags flags;
 
