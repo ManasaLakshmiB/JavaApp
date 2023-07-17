@@ -10,12 +10,12 @@ public class Flags {
         this.alt = alt;
     }
 
-    public String getSvg() {
+    public String getPng() {
         return png;
     }
 
-    public void setSvg(String svg) {
-        this.png = svg;
+    public void setPng(String svg) {
+        this.png = png;
     }
 
     public String getAlt() {

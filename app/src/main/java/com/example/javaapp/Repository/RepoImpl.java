@@ -21,29 +21,20 @@ public class RepoImpl {
         this.repository = repository;
     }
     public  void makeAPICall(String query, MutableLiveData<List<RecyclerData>> liveData){
-        Call<RecyclerData[]> call =repository.getDataFromApi(query);
-
-
-
-
-
-
-
-        call.enqueue(new Callback<RecyclerData[]>() {
+        Call<List<RecyclerData>> call =repository.getDataFromApi(query);
+        call.enqueue(new Callback<List<RecyclerData>>() {
             @Override
-            public void onResponse(Call<RecyclerData[]> call, Response<RecyclerData[]> response) {
+            public void onResponse(Call<List<RecyclerData>> call, Response<List<RecyclerData>> response) {
                 if(response.isSuccessful()){
-                    liveData.postValue(Arrays.asList(response.body()));
+                    liveData.postValue(response.body());
                 }else {
                     liveData.postValue(null);
                 }
-
             }
 
             @Override
-            public void onFailure(Call<RecyclerData[]> call, Throwable t) {
+            public void onFailure(Call<List<RecyclerData>> call, Throwable t) {
                 liveData.postValue(null);
-
             }
         });
     }

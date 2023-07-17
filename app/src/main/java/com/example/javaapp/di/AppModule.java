@@ -16,7 +16,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class AppModule {
 
     String  Base_URL= "https://restcountries.com/v3.1/";//all?fields=flags
-    //https://restcountries.com/v3.1/all?fields=flags
+
 
     @Singleton
     @Provides

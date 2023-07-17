@@ -36,7 +36,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         holder.textView.setText(flags.get(position).getFlags().getAlt());
         Glide.with(holder.imageView)
-                .load(flags.get(position).getFlags().getSvg())
+                .load(flags.get(position).getFlags().getPng())
                 .into(holder.imageView);
     }
 
